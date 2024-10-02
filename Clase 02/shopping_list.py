@@ -1,3 +1,5 @@
+# Ejercicio 1:
+
 print("Shopping List")
 print("-------------")
 print("1. Giacomo")
