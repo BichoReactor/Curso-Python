@@ -1,4 +1,4 @@
-# Ejercicio 3: Calcular el ingreso promedio de los primeros 6 meses del año
+# Ejercicio 3: Calcular el ingreso promedio de los primeros 6 meses del año actual
 
 ingreso_enero   = 35632
 ingreso_febrero = 3223432
