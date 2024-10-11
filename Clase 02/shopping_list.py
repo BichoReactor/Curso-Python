@@ -1,4 +1,4 @@
-# Ejercicio 1:
+# Ejercicio 1: Lista de compras
 
 print("Shopping List")
 print("-------------")
