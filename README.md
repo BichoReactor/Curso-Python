@@ -1,7 +1,5 @@
 ## Curso Python desde cero
 
-### Ejercicios + Proyecto integrador
-
 [Campus Virtual](https://aulasvirtuales.bue.edu.ar)
 
 [Clases en YouTube](https://www.youtube.com/playlist?list=PLR6qrffywxhB6FFTdb0Rm365aJ7lMU8eU)
@@ -43,6 +41,7 @@ Clase 5
 </a>
 </td>
 <td>
+Clase 6
 <!--a href="https://youtu.be/NJacVZx2fv8">
 <img src="http://i3.ytimg.com/vi/NJacVZx2fv8/maxresdefault.jpg"-->
 </a>
