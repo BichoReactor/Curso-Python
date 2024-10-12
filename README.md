@@ -11,52 +11,40 @@
 <table style="width:100%">
 <tr>
 <td>
+Clase 1
 <a href="https://youtu.be/dB1f7ZvfA3Q">
 <img src="http://i3.ytimg.com/vi/dB1f7ZvfA3Q/maxresdefault.jpg">
 </a>
 </td>
 <td>
-<a href="https://youtu.be/3UCZltG8iCY">
-<img src="http://i3.ytimg.com/vi/3UCZltG8iCY/maxresdefault.jpg">
+Clase 2
+<a href="https://youtu.be/v3KOSvG9IVE">
+<img src="http://i3.ytimg.com/vi/v3KOSvG9IVE/maxresdefault.jpg">
 </a>
 </td>
 <td>
-<a href="https://youtu.be/3GymExBkKjE">
-<img src="http://i3.ytimg.com/vi/3GymExBkKjE/maxresdefault.jpg">
-</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://youtu.be/SavaU66KxQY">
-<img src="http://i3.ytimg.com/vi/SavaU66KxQY/maxresdefault.jpg">
-</a>
-</td>
-<td>
-<a href="https://youtu.be/G0ga_YVQOaw">
-<img src="http://i3.ytimg.com/vi/G0ga_YVQOaw/maxresdefault.jpg">
-</a>
-</td>
-<td>
-<a href="https://youtu.be/NJacVZx2fv8">
-<img src="http://i3.ytimg.com/vi/NJacVZx2fv8/maxresdefault.jpg">
+Clase 3
+<a href="https://youtu.be/_ynoniewVlM">
+<img src="http://i3.ytimg.com/vi/_ynoniewVlM/maxresdefault.jpg">
 </a>
 </td>
 </tr>
 <tr>
 <td>
-<a href="https://youtu.be/_y9qQZXE24A">
-<img src="http://i3.ytimg.com/vi/_y9qQZXE24A/maxresdefault.jpg">
+Clase 4
+<a href="https://youtu.be/RmsaiSpjv00">
+<img src="http://i3.ytimg.com/vi/RmsaiSpjv00/maxresdefault.jpg">
 </a>
 </td>
 <td>
-<a href="https://youtu.be/mIVbUb7shE8">
-<img src="http://i3.ytimg.com/vi/mIVbUb7shE8/maxresdefault.jpg">
+Clase 5
+<!--a href="https://youtu.be/G0ga_YVQOaw">
+<img src="http://i3.ytimg.com/vi/G0ga_YVQOaw/maxresdefault.jpg"-->
 </a>
 </td>
 <td>
-<a href="https://youtu.be/zFbTXe1yFGA">
-<img src="http://i3.ytimg.com/vi/zFbTXe1yFGA/maxresdefault.jpg">
+<!--a href="https://youtu.be/NJacVZx2fv8">
+<img src="http://i3.ytimg.com/vi/NJacVZx2fv8/maxresdefault.jpg"-->
 </a>
 </td>
 </tr>
