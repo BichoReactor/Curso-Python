@@ -2,6 +2,4 @@
 
 ## Ejercicios + Proyecto integrador
 
-
-[Campus Virtual][campus].
-[campus]: https://aulasvirtuales.bue.edu.ar/
+[Campus Virtual](https://aulasvirtuales.bue.edu.ar)
