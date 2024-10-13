@@ -1,3 +1,3 @@
-# Ejercicio 1: Hola mundo
+# Ejercicio 0: Hola mundo
 
 print("Hola mundo!!!")
