@@ -9,4 +9,4 @@ ingreso_junio   = 1231255
 
 ingreso_promedio = (ingreso_enero + ingreso_febrero + ingreso_marzo + ingreso_abril + ingreso_mayo + ingreso_junio) / 6
 
-print("El ingreso promedio del primer semestre es", ingreso_promedio)
+print(f"El ingreso promedio del primer semestre es {ingreso_promedio:.2f}.")
