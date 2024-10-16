@@ -12,6 +12,6 @@ propina    = total_cena * 0.10
 
 total_con_propina = total_cena + propina
 
-print("Total de la cena (sin propina): ", total_cena)
-print("Propina (10%): ", propina)
-print("Total a pagar (con propina): ", total_con_propina)
+print(f"Total de la cena (sin propina): {total_cena:.2f}")
+print(f"Propina (10%): {propina:.2f}")
+print(f"Total a pagar (con propina): {total_con_propina:.2f}")
