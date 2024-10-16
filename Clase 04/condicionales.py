@@ -6,7 +6,3 @@ print(f"{a} > {b} es {a > b}")
 print(f"{a} < {b} es {a < b}")
 print(f"{a} == {b} es {a == b}")
 print(f"{a} != {b} es {a != b}")
-
-# Operadores lógicos:
-
-# Estructuras de control:
