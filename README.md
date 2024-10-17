@@ -42,8 +42,8 @@ Clase 5
 </td>
 <td>
 Clase 6
-<!--a href="https://youtu.be/NJacVZx2fv8">
-<img src="http://i3.ytimg.com/vi/NJacVZx2fv8/maxresdefault.jpg"-->
+<a href="https://youtu.be/cIjAR1hCJCg">
+<img src="http://i3.ytimg.com/vi/cIjAR1hCJCg/maxresdefault.jpg">
 </a>
 </td>
 </tr>
