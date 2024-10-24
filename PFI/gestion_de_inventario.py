@@ -16,3 +16,21 @@ opcion = int(input("Por favor, seleccione una opción: "))
 
 # Mostramos el número de la opción seleccionada:
 print(f"Ha seleccionado la opción {opcion}")
+
+match opcion:
+    case 1:
+        """Nada"""
+    case 2:
+        """Nada"""
+    case 3:
+        """Nada"""
+    case 4:
+        """Nada"""
+    case 5:
+        """Nada"""
+    case 6:
+        """Nada"""
+    case 7:
+        """Nada"""
+    case _:
+        print("Opción Incorrecta")
