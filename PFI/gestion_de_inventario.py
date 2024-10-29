@@ -1,6 +1,7 @@
+opcion          = 0
 lista_productos = []
 
-while True:
+while opcion != 7:
     # Menú de opciones:
     print("----------------------------")
     print("Menú de Gestión de Productos")
@@ -39,7 +40,8 @@ while True:
         case 6:
             """Nada"""
         case 7:
-            print("Hasta luego. Gracias por utilizar nuestro software.")
-            break
+            print("Saliendo de la aplicación.")
         case _:
             print("Opción Incorrecta.")
+
+print("Hasta luego. Gracias por utilizar nuestro software.")
