@@ -47,5 +47,25 @@ Clase 6
 </a>
 </td>
 </tr>
+<tr>
+<td>
+Clase 7
+<a href="https://youtu.be/cj2Vvq39o50">
+<img src="http://i3.ytimg.com/vi/cj2Vvq39o50/maxresdefault.jpg">
+</a>
+</td>
+<td>
+Clase 8
+<a href="https://youtu.be/https://youtu.be/numwdKe_h2s">
+<img src="http://i3.ytimg.com/vi/numwdKe_h2s/maxresdefault.jpg">
+</a>
+</td>
+<td>
+Clase 9
+<a href="">
+<img src="">
+</a>
+</td>
+</tr>
 </table>
 
