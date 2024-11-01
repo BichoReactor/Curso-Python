@@ -55,8 +55,8 @@ Clase 7
 </a>
 </td>
 <td>
-Clase 8
-<a href="https://youtu.be/https://youtu.be/numwdKe_h2s">
+Clase 8 
+<a href="https://youtu.be/numwdKe_h2s">
 <img src="http://i3.ytimg.com/vi/numwdKe_h2s/maxresdefault.jpg">
 </a>
 </td>
