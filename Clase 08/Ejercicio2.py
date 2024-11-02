@@ -34,7 +34,7 @@ productos_cantidad = len(productos)
 codigo_valido = False
 
 while i < productos_cantidad:
-    if productos[i] == producto_codigo:
+    if productos[i][0] == producto_codigo:
         codigo_valido = True
         producto_indice = i
         break
@@ -46,7 +46,7 @@ if codigo_valido:
     if productos_cantidad_vendida <= 0:
         print("Error: La cantidad vendida debe ser mayor a 0(cero)")
     elif productos_cantidad_vendida > productos[producto_indice][2]:
-        print("Error: No se pueden vender más productos de lo que existe en stock.")
+        print("Error: No se pueden vender más productos de lo que existen en stock.")
 else:
     print("Error: El código de producto ingresado no existe.")
         
