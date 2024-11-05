@@ -62,8 +62,8 @@ Clase 8
 </td>
 <td>
 Clase 9
-<a href="">
-<img src="">
+<a href="https://youtu.be/wdE_zWa3AFA">
+<img src="http://i3.ytimg.com/vi/wdE_zWa3AFA/maxresdefault.jpg">
 </a>
 </td>
 </tr>
