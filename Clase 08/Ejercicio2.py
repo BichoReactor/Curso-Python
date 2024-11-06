@@ -23,30 +23,58 @@ productos = [
     ["P001", "Manzanas", 50],
     ["P002", "Peras", 40],
     ["P003", "Bananas", 30], 
-    ["P004", "Naranjas", 60]
+    ["P004", "Naranjas", 60],
+    ["P005", "Uvas", 50],
+    ["P006", "Frutillas", 40],
+    ["P007", "Kiwis", 30], 
+    ["P008", "Mandarinas", 60],
+    ["P009", "Guindas", 30], 
+    ["P010", "Duraznos", 60]
 ]
 
-producto_codigo = input("Ingrese el código del producto: ")
+# Le muestro al usuario los productos existentes:
+print("Lista de productos")
+print("------------------")
 
-i = 0
-productos_cantidad = len(productos)
+for producto in productos:
+    print("Lista de productos", producto)
+
+# Solicito al usuario que ingrese el código del producto:
+print("")
+producto_codigo = input("Ingrese el código del producto: ")
+producto_nombre = ""
 
 codigo_valido = False
 
-while i < productos_cantidad:
-    if productos[i][0] == producto_codigo:
+for producto in productos:
+    if producto[0] == producto_codigo:
+        producto_nombre = producto[1]
         codigo_valido = True
-        producto_indice = i
         break
-    i += 1
 
 if codigo_valido:
-    productos_cantidad_vendida = int(input(f"Ingrese la cantidad vendida de {productos[producto_indice][1]} ({productos[producto_indice][0]}): "))
+    productos_cantidad_vendida = int(input(f"Ingrese la cantidad vendida de {producto_nombre} ({producto_codigo}): "))
 
     if productos_cantidad_vendida <= 0:
         print("Error: La cantidad vendida debe ser mayor a 0(cero)")
-    elif productos_cantidad_vendida > productos[producto_indice][2]:
+    elif productos_cantidad_vendida > producto[2]:
         print("Error: No se pueden vender más productos de lo que existen en stock.")
+    else:
+        print(f"Se vendieron {productos_cantidad_vendida} de {producto_nombre}")
+        
+        # Actualizo el stock:
+        for producto in productos:
+            if producto[0] == producto_codigo:
+                producto[2] = producto[2] - productos_cantidad_vendida
+                break
+        
+        # Muestro cómo quedó el stock:
+        print()
+        print("Lista de productos")
+        print("------------------")
+
+        for producto in productos:
+            print("Lista de productos", producto)
 else:
     print("Error: El código de producto ingresado no existe.")
         
