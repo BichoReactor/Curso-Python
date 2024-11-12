@@ -67,5 +67,25 @@ Clase 9
 </a>
 </td>
 </tr>
+<tr>
+<td>
+After Clase 9
+<a href="https://youtu.be/BrlUaivUdm0">
+<img src="http://i3.ytimg.com/vi/BrlUaivUdm0/maxresdefault.jpg">
+</a>
+</td>
+<td>
+Clase 10 
+<a href="https://youtu.be/kzw432hk92c">
+<img src="http://i3.ytimg.com/vi/kzw432hk92c/maxresdefault.jpg">
+</a>
+</td>
+<td>
+Repaso Clase 10
+<a href="https://youtu.be/MW6DdjWmMUg">
+<img src="http://i3.ytimg.com/vi/MW6DdjWmMUg/maxresdefault.jpg">
+</a>
+</td>
+</tr>
 </table>
 
