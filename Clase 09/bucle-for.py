@@ -21,3 +21,23 @@ for mes in range(3):
 
 for indice, fruta in enumerate(productos):
     print(f"Fruta[{indice}]: {fruta}")
+
+# Suma y promedio:
+suma = 0
+
+for cont in range(5):
+    num= int(input("Ingrese un número: "))
+    suma = suma + num
+
+print('La suma es:',suma)
+
+print('El promedio es:',suma/(cont+1))
+
+# Procesar datos:
+total = 0
+
+for i in range(5):
+    importe = float(input("Ingrese el importe: "))
+    total = total + importe
+
+print("El total de los importes ingresados es:" ,total)
