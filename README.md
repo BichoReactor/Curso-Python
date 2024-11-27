@@ -87,5 +87,25 @@ Repaso Clase 10
 </a>
 </td>
 </tr>
+<tr>
+<td>
+After Clase 10
+<a href="https://youtu.be/xEcyj9fmKqw">
+<img src="http://i3.ytimg.com/vi/xEcyj9fmKqw/maxresdefault.jpg">
+</a>
+</td>
+<td>
+Introducción a funciones
+<a href="https://youtu.be/61iy2Ujh6xk">
+<img src="http://i3.ytimg.com/vi/61iy2Ujh6xk/maxresdefault.jpg">
+</a>
+</td>
+<td>
+
+<a href="https://youtu.be/">
+<img src="http://i3.ytimg.com/vi//maxresdefault.jpg">
+</a>
+</td>
+</tr>
 </table>
 
