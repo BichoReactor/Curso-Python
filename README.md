@@ -109,19 +109,19 @@
     </tr>
     <tr>
         <td>
-            After Clase 11
+            Clase 12
             <a href="https://youtu.be/wwoxOadvFhs">
                 <img src="http://i3.ytimg.com/vi/wwoxOadvFhs/maxresdefault.jpg">
             </a>
         </td>
         <td>
-            Clase 12
-            <a href="https://youtu.be/">
-                <img src="http://i3.ytimg.com/vi//maxresdefault.jpg">
+            Clase 13
+            <a href="https://youtu.be/oGmALDQv8qk">
+                <img src="http://i3.ytimg.com/vi/oGmALDQv8qk/maxresdefault.jpg">
             </a>
         </td>
         <td>
-            Clase 13
+            Clase 14
             <a href="https://youtu.be/">
                 <img src="http://i3.ytimg.com/vi//maxresdefault.jpg">
             </a>
