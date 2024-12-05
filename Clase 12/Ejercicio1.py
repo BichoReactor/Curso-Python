@@ -8,4 +8,4 @@ Al ingresar una cantidad o precio no válido, debe mostrar un mensaje de error
 y pedir los datos nuevamente hasta que sean correctos.
 """
 
-# En PFI.
+# En PFI de la clase.
