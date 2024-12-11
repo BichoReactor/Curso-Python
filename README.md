@@ -127,4 +127,24 @@
             </a>
         </td>
     </tr>
+    <tr>
+        <td>
+            Clase 15
+            <a href="https://youtu.be/5FuttVBhyVc">
+                <img src="http://i3.ytimg.com/vi/5FuttVBhyVc/maxresdefault.jpg">
+            </a>
+        </td>
+        <td>
+            After Clase 15
+            <a href="https://youtu.be/">
+                <img src="http://i3.ytimg.com/vi//maxresdefault.jpg">
+            </a>
+        </td>
+        <td>
+            Clase 16
+            <a href="https://youtu.be/">
+                <img src="http://i3.ytimg.com/vi//maxresdefault.jpg">
+            </a>
+        </td>
+    </tr>
 </table>
