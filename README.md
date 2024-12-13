@@ -136,8 +136,8 @@
         </td>
         <td>
             After Clase 15
-            <a href="https://youtu.be/">
-                <img src="http://i3.ytimg.com/vi//maxresdefault.jpg">
+            <a href="https://youtu.be/D24MttYkfAo">
+                <img src="http://i3.ytimg.com/vi/D24MttYkfAo/maxresdefault.jpg">
             </a>
         </td>
         <td>
