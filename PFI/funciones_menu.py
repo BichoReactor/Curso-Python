@@ -1,4 +1,4 @@
-from funciones_db import db_insertar_producto, db_mostrar_productos, db_mostrar_producto
+from funciones_db import db_insertar_producto, db_mostrar_productos, db_mostrar_producto, db_actualizar_producto, db_eliminar_producto, db_reporte_bajo_stock
 from funciones_validacion import get_producto_nombre, get_producto_descripcion, get_producto_categoria, get_producto_precio, get_producto_cantidad, get_id
 
 # Crea el menú de usuario:
@@ -59,10 +59,7 @@ def mostrar_productos():
         print("Listado de productos:")
         print("-"*21)
         for producto in productos:
-            print(f"Nombre: {producto[1]} [ID: {producto[0]}] [Categoría: {producto[3]}]")
-            print(f"Descripción: {producto[2]}")
-            print(f"Cantidad: {producto[4]} - Precio: {producto[5]}")            
-            print("°"*60)
+            mostrar_producto(producto)
 
 def actualizar_producto():
     id = get_id()
@@ -72,17 +69,35 @@ def actualizar_producto():
     if not producto:
         print(f"No existe producto con ID {id}")
     else:
-        print("°"*60)
-        print(f"Nombre: {producto[1]} [ID: {producto[0]}] [Categoría: {producto[3]}]")
-        print(f"Descripción: {producto[2]}")
-        print(f"Cantidad: {producto[4]} - Precio: {producto[5]}")            
-        print("°"*60)
-    
-    print()
+        mostrar_producto(producto)
+
+        cantidad = get_producto_cantidad()
+        
+        db_actualizar_producto(id, cantidad)
+        
+    print("")
     print("Producto actualizado.")
     
 def eliminar_producto():
-    print("Se eliminó el producto.")
+    id = get_id()
+    
+    producto = db_mostrar_producto(id)
+    
+    if not producto:
+        print(f"No existe producto con ID {id}")
+    else:
+        mostrar_producto(producto)
+
+        print("")
+        confirmar = input("Ingrese 'E' para confirmar la eliminación, o cualquier otra letra para cancelar: ").lower()
+    
+        if confirmar == 'e':    
+            print("")
+            
+            db_eliminar_producto(id)
+            
+            print("")
+            print("Se eliminó el producto.")                
     
 def buscar_producto():
     id = get_id()
@@ -92,17 +107,33 @@ def buscar_producto():
     if not producto:
         print(f"No existe producto con ID {id}")
     else:
-        print("°"*60)
-        print(f"Nombre: {producto[1]} [ID: {producto[0]}] [Categoría: {producto[3]}]")
-        print(f"Descripción: {producto[2]}")
-        print(f"Cantidad: {producto[4]} - Precio: {producto[5]}")            
-        print("°"*60)
+        mostrar_producto(producto)
     
 def reporte_bajo_stock():
-    print("Productos con bajo stock.")
+    cantidad = get_producto_cantidad()
+    
+    print("")
+    print(f"Listado de productos con stock menor a {cantidad}:")
+    print("-"*21)
+    
+    productos = db_reporte_bajo_stock(cantidad)
+    
+    if not productos:
+        print("No hay productos con bajo stock.")    
+    else:
+        for producto in productos:
+            mostrar_producto(producto)
 
 def salir_de_aplicacion():
     print("Saliendo de la aplicación.")
     
 def opcion_incorrecta():
     print("Opción Incorrecta.")
+    
+# Auxiliares:
+def mostrar_producto(producto):
+    print("°"*60)
+    print(f"Nombre: {producto[1]} [ID: {producto[0]}] [Categoría: {producto[3]}]")
+    print(f"Descripción: {producto[2]}")
+    print(f"Cantidad: {producto[4]} - Precio: {producto[5]}")            
+    print("°"*60)
