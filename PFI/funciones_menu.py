@@ -1,11 +1,12 @@
-from funciones_db import db_insertar_producto
+from funciones_db import db_insertar_producto, db_mostrar_productos, db_mostrar_producto, db_actualizar_producto, db_eliminar_producto, db_reporte_bajo_stock
+from funciones_validacion import get_producto_nombre, get_producto_descripcion, get_producto_categoria, get_producto_precio, get_producto_cantidad, get_id
 
 # Crea el menú de usuario:
 def crear_menu():
     print()
-    print("-"*28)
-    print("Menú de Gestión de Productos")
-    print("-"*28)
+    print("-"*32)
+    print("| Menú de Gestión de Productos |")
+    print("-"*32)
     print()
     print("1. Agegar producto")
     print("2. Listado de productos")
@@ -25,46 +26,15 @@ def crear_menu():
 def registrar_producto():
     # Ingreso de datos:
     print("")
-    producto_nombre      = input("Ingrese el nombre del producto: ")
-    producto_descripcion = input("Ingrese la descripción del producto: ")
-    producto_categoria   = input("Ingrese la categoría del producto: ")
-    producto_precio      = input("Ingrese el precio unitario del producto: ")
-    producto_cantidad    = input("Ingrese la cantidad de unidades del producto: ")
-    
-    # Validaciones:
-    #   Valido que el nombre no esté vacío:
-    while producto_nombre == "":
-        print("")
-        print("Debe ingresar un nombre de producto. Ingrese un nombre.")
+    print("Ingrese los datos del producto que desea registrar.")
+    print("-"*51)
+    producto_nombre      = get_producto_nombre()
+    producto_descripcion = get_producto_descripcion()
+    producto_categoria   = get_producto_categoria()
+    producto_precio      = get_producto_precio()
+    producto_cantidad    = get_producto_cantidad()
         
-        producto_nombre = input("Ingrese el nombre del producto: ")
-    
-    #   Valido que la categoría no esté vacía:
-    while producto_categoria == "":
-        print("")
-        print("Debe ingresar una categoría para el producto. Ingrese una categoría.")
-        
-        producto_categoria = input("Ingrese la categoría del producto: ")
-    
-    #   Valido que el precio sea un real mayor a cero:
-    while not es_real(producto_precio) or float(producto_precio) <= 0:
-        print("")
-        print(f"El precio {producto_precio} no es válido. Ingrese un precio válido.")
-        
-        producto_precio = input("Ingrese el precio unitario del producto: ")
-        
-    producto_precio = float(producto_precio)       
-    
-    #   Valido que la cantidad sea un entero mayor a cero:
-    while not es_entero(producto_cantidad) or int(producto_cantidad) <= 0:
-        print("")
-        print(f"La cantidad {producto_cantidad} no es válida. Ingrese una cantidad válida.")
-        
-        producto_cantidad = input("Ingrese la cantidad de unidades del producto: ")
-        
-    producto_cantidad = int(producto_cantidad)            
-    
-    # Con los datos ya valdiados, armo el "producto" con un diccionario:
+    # Con los datos ingresados ya validados, armo el "producto" con un diccionario:
     producto = {
         "nombre"      : producto_nombre, 
         "descripcion" : producto_descripcion,
@@ -76,43 +46,83 @@ def registrar_producto():
     # Inserto el producto en la DB:
     db_insertar_producto(producto)
     
+    print("")
     print("Producto agregado con éxito.")
-    
-    return producto
 
 def mostrar_productos():
-    productos_cantidad = len(productos)
-            
-    if productos_cantidad == 0:
-        print("No hay productos registrados.")
+    productos = db_mostrar_productos()
+    
+    if not productos:
+        print("Aún no hay productos.")
     else:
-        print(f"Lista de productos:")
-        
-        i = 0  
-        while i < productos_cantidad:
-            print("Producto", 
-                  i+1, productos[i]["nombre"], 
-                  "- Descripción:", 
-                  productos[i]["descripcion"], 
-                  "- Categoría:", 
-                  productos[i]["categoria"],
-                  "- Precio:", 
-                  productos[i]["precio"],
-                  "- Cantidad:", 
-                  productos[i]["cantidad"])
-            i +=1
+        print("")
+        print("Listado de productos:")
+        print("-"*21)
+        for producto in productos:
+            mostrar_producto(producto)
 
 def actualizar_producto():
+    id = get_id()
+    
+    producto = db_mostrar_producto(id)
+    
+    if not producto:
+        print(f"No existe producto con ID {id}")
+    else:
+        mostrar_producto(producto)
+
+        cantidad = get_producto_cantidad()
+        
+        db_actualizar_producto(id, cantidad)
+        
+    print("")
     print("Producto actualizado.")
     
 def eliminar_producto():
-    print("Se eliminó el producto.")
+    id = get_id()
+    
+    producto = db_mostrar_producto(id)
+    
+    if not producto:
+        print(f"No existe producto con ID {id}")
+    else:
+        mostrar_producto(producto)
+
+        print("")
+        confirmar = input("Ingrese 'E' para confirmar la eliminación, o cualquier otra letra para cancelar: ").lower()
+    
+        if confirmar == 'e':    
+            print("")
+            
+            db_eliminar_producto(id)
+            
+            print("")
+            print("Se eliminó el producto.")                
     
 def buscar_producto():
-    print("Producto encontrado.")
+    id = get_id()
+    
+    producto = db_mostrar_producto(id)
+    
+    if not producto:
+        print(f"No existe producto con ID {id}")
+    else:
+        mostrar_producto(producto)
     
 def reporte_bajo_stock():
-    print("Productos con bajo stock.")
+    cantidad = get_producto_cantidad()
+    
+    print("")
+    print(f"Listado de productos con stock menor a {cantidad}:")
+    print("-"*21)
+    
+    productos = db_reporte_bajo_stock(cantidad)
+    
+    if not productos:
+        print("No hay productos con bajo stock.")    
+    else:
+        for producto in productos:
+            mostrar_producto(producto)
 
 def salir_de_aplicacion():
     print("Saliendo de la aplicación.")
@@ -120,17 +130,10 @@ def salir_de_aplicacion():
 def opcion_incorrecta():
     print("Opción Incorrecta.")
     
-# Funciones auxiliares:
-def es_real(str_float):
-    try:
-        str_float = float(str_float)
-        return True
-    except ValueError:
-        return False
-
-def es_entero(str_int):
-    try:
-        str_int = int(str_int)
-        return True
-    except ValueError:
-        return False
+# Auxiliares:
+def mostrar_producto(producto):
+    print("°"*60)
+    print(f"Nombre: {producto[1]} [ID: {producto[0]}] [Categoría: {producto[3]}]")
+    print(f"Descripción: {producto[2]}")
+    print(f"Cantidad: {producto[4]} - Precio: {producto[5]}")            
+    print("°"*60)
