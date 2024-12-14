@@ -52,3 +52,33 @@ def db_insertar_producto(producto):
     conexion.close()
     
     return True
+
+def db_mostrar_productos():
+    conexion = sqlite3.connect(RUTA_DB)
+
+    cursor = conexion.cursor()
+
+    cursor.execute("SELECT * FROM productos")
+
+    resultados = cursor.fetchall()
+
+    conexion.close()
+    
+    return resultados
+
+def db_mostrar_producto(id):
+    conexion = sqlite3.connect(RUTA_DB)
+
+    cursor = conexion.cursor()
+
+    query = "SELECT * FROM productos WHERE id = ?"
+    
+    datos = (id,)
+    
+    cursor.execute(query, datos)
+
+    resultado = cursor.fetchone()
+
+    conexion.close()
+    
+    return resultado

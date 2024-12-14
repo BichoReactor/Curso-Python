@@ -28,7 +28,13 @@ while opcion != "7":
         case "7":
             funciones_menu.salir_de_aplicacion()        
         case _:
-            funciones_menu.opcion_incorrecta()        
-
-print("")
-print("Hasta luego. Gracias por utilizar nuestra app.")
+            funciones_menu.opcion_incorrecta()    
+    
+    print("")
+    continuar = input("Ingrese 'S' para salir, o cualquier otra letra para continuar: ").lower()
+    
+    if continuar == 's':    
+        print("")
+        print("Hasta luego. Gracias por utilizar nuestra app.")
+        break
+    
