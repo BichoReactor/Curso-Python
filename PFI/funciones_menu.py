@@ -1,12 +1,16 @@
 from funciones_db import db_insertar_producto, db_mostrar_productos, db_mostrar_producto, db_actualizar_producto, db_eliminar_producto, db_reporte_bajo_stock
 from funciones_validacion import get_producto_nombre, get_producto_descripcion, get_producto_categoria, get_producto_precio, get_producto_cantidad, get_id
+from colorama import init, Fore
+
+# Inicializo Colorama:
+init(autoreset=True)
 
 # Crea el menú de usuario:
 def crear_menu():
     print()
-    print("-"*32)
-    print("| Menú de Gestión de Productos |")
-    print("-"*32)
+    print(Fore.GREEN + "-"*32)
+    print(Fore.GREEN + "| Menú de Gestión de Productos |")
+    print(Fore.GREEN + "-"*32)
     print()
     print("1. Agegar producto")
     print("2. Listado de productos")
@@ -19,7 +23,7 @@ def crear_menu():
 
     # Solicitar al usuario que seleccione una opción:
     # Aclaración: al no convertir a int el valor de opción salvo el caso en que el usuario ingresa algo que no sea numérico.
-    opcion = input("Por favor, seleccione una opción: ")
+    opcion = input(Fore.YELLOW + "Por favor, seleccione una opción: ")
     
     return opcion
 
