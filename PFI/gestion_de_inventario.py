@@ -1,5 +1,9 @@
 from funciones_db import db_crear_tabla
 import funciones_menu
+from colorama import init, Back, Fore, Style
+
+# Inicializo Colorama:
+init(autoreset=True)
 
 # Conecto con la DB:
 db_crear_tabla()
@@ -31,10 +35,10 @@ while opcion != "7":
             funciones_menu.opcion_incorrecta()    
     
     print("")
-    continuar = input("Ingrese 'S' para salir, o cualquier otra letra para continuar: ").lower()
+    continuar = input(Fore.GREEN + "Ingrese 'S' para salir, o cualquier otra letra para continuar: ").lower()
     
     if continuar == 's':    
         print("")
-        print("Hasta luego. Gracias por utilizar nuestra app.")
+        print(Fore.GREEN + "Hasta luego. Gracias por utilizar nuestra app.")
         break
     
