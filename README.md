@@ -142,8 +142,8 @@
         </td>
         <td>
             Clase 16
-            <a href="https://youtu.be/">
-                <img src="http://i3.ytimg.com/vi//maxresdefault.jpg">
+            <a href="https://youtu.be/bCeXuWQKxNY">
+                <img src="http://i3.ytimg.com/vi/bCeXuWQKxNY/maxresdefault.jpg">
             </a>
         </td>
     </tr>
